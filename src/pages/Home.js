@@ -32,22 +32,20 @@ const Home = () => {
 
   return (
     <div className="home">
-      <div className="workouts">
-        Hi {`${user.name.split(' ')[0]}`},
-        <p>Home will be shown only after successful login/sign up</p>
-        <p>Registered users below:</p>
-        {loading ? (
-          <p>Loading...</p>
-        ) : error ? (
-          <p>{error}</p>
-        ) : (
-          usersList.map((i) => (
-            <li className={user._id === i._id ? 'active-user' : ''} key={i._id}>
-              {i.name} | {i.email}
-            </li>
-          ))
-        )}
-      </div>
+      Hi {`${user.name.split(' ')[0]}`},
+      <p>Home will be shown only after successful login/sign up</p>
+      <p>Registered users below:</p>
+      {loading ? (
+        <p>Loading...</p>
+      ) : error ? (
+        <p>{error}</p>
+      ) : (
+        usersList.map((i) => (
+          <li className={user._id === i._id ? 'active-user' : ''} key={i._id}>
+            {i.name} | {i.email}
+          </li>
+        ))
+      )}
     </div>
   );
 };
