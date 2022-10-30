@@ -1,0 +1,185 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+
+/* layout */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #1aac83;
+  --error: #e7195a;
+  --primary-background: #f1f1f1;
+  --secondary-background: #fff;
+  --primary-text: #000;
+  --secondary-text: #333;
+  --primary-border: #ddd;
+}
+
+[data-theme='dark'] {
+  --primary: #ff731d;
+  --error: #e7195a;
+  --primary-text: #f1f1f1;
+  --secondary-text: #fff;
+  --primary-background: #000;
+  --secondary-background: #333;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins';
+  transition: all 0.5s;
+  background: var(--primary-background);
+  color: var(--primary-text);
+}
+
+header {
+  background: var(--secondary-background);
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  a {
+    color: var(--secondary-text);
+    text-decoration: none;
+    transition: all 0.25s;
+    &:hover {
+      color: var(--primary);
+    }
+  }
+  h1 {
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
+}
+.pages {
+  max-width: 1400px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* homepage */
+.home {
+  .active-user {
+    color: var(--primary);
+  }
+}
+// .workout-details {
+//   background: #fff;
+//   border-radius: 4px;
+//   margin: 20px auto;
+//   padding: 20px;
+//   position: relative;
+//   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+// }
+// .workout-details h4 {
+//   margin: 0 0 10px 0;
+//   font-size: 1.2em;
+//   color: var(--primary);
+// }
+// .workout-details p {
+//   margin: 0;
+//   font-size: 0.9em;
+//   color: #555;
+// }
+// .workout-details span {
+//   position: absolute;
+//   top: 20px;
+//   right: 20px;
+//   cursor: pointer;
+//   background: #f1f1f1;
+//   padding: 6px;
+//   border-radius: 50%;
+//   color: #333;
+// }
+
+/* new form */
+label,
+input {
+  display: block;
+}
+input {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid var(--primary-border);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+form button {
+  background: var(--primary);
+  border: 0;
+  color: var(--secondary-background);
+  padding: 10px;
+  font-family: 'Poppins';
+  border-radius: 4px;
+  cursor: pointer;
+}
+div.error {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
+}
+input.error {
+  border: 1px solid var(--error);
+}
+
+/* navbar */
+nav {
+  display: flex;
+  align-items: center;
+  a,
+  button {
+    margin: 0 10px;
+  }
+  button {
+    background: var(--secondary-background);
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-family: 'Poppins';
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.5s;
+    &:hover {
+      background: var(--primary);
+      color: var(--secondary-background);
+    }
+  }
+  .theme-button {
+    border: none;
+    margin: 0;
+    padding: 8px 12px;
+    svg {
+      fill: var(--primary);
+    }
+    &:hover {
+      svg {
+        fill: var(--secondary-background);
+      }
+    }
+  }
+  span {
+    margin: 0 10px;
+  }
+}
+
+/* auth forms */
+form.signup,
+form.login {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background: var(--secondary-background);
+  border-radius: 4px;
+}
